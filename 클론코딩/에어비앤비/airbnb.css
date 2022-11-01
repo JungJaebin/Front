@@ -1,0 +1,209 @@
+:root {
+    --headBottom_color: rgb(235 235 235);
+    --logo_color: rgb(249 28 82);
+    --boxLine_color: rgb(221 221 211);
+    --link1_color: rgb(31 31 31);
+    --link2_color: rgb(132 132 132);
+    --link3_color: rgb(255 56 92);
+    --hamburger_color: rgb(87 87 87);
+    --user_color: rgb(102 102 102);
+    --hover_color: rgb(247 247 247);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+
+    border-bottom: 1px solid var(--headBottom_color);
+
+    display: flex;
+
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.menu_left {
+    display: flex;
+
+    align-items: center;
+
+    margin-right: 100px;
+}
+
+.logo {
+    font-size: xx-large;
+
+    color: var(--logo_color);
+
+    display: flex;
+
+    align-items: center;
+}
+
+span {
+    font-size: x-large;
+
+    margin-left: 5px;
+}
+
+.menu_middle {
+    display: flex;
+
+    align-items: center;
+}
+
+.box {
+    border: 1px solid var(--boxLine_color);
+    border-radius: 40px;
+
+    width: 334px;
+    height: 40px;
+
+    font-size: 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box:hover {
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.link1 {
+    color: var(--link1_color);
+
+    font-weight: 500;
+
+    margin-left: 10px;
+}
+
+.link2 {
+    color: var(--link2_color);
+}
+
+.link3 {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background-color: var(--link3_color);
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_right {
+    width: 250px;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu {
+    border: 1px solid var(--boxLine_color);
+    border-radius: 21px;
+
+    width: 77px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu:hover {
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.aaa {
+    background-color: white;
+
+    width: 100px;
+    height: 40px;
+
+    border-radius: 30px;
+}
+
+.host {
+    color: var(--link1_color);
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.host:hover {
+    background-color: var(--hover_color);
+}
+
+.earth {
+    color: var(--link1_color);
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.earth:hover {
+    background-color: var(--hover_color);
+}
+
+.hamburger {
+    color: var(--hamburger_color);
+
+    margin-left: 5px;
+}
+
+.user {
+    color: var(--user_color);
+
+    font-size: 30px;
+}
+
+@media all and (max-width: 1127px) {
+    span {
+        display: none;
+    }
+}
+
+@media all and (max-width: 949px) {
+
+    .logo {
+        position: fixed;
+    }
+
+    .menu_middle {
+        margin-right: 300px;
+    }
+}
+
+@media all and (max-width: 743px) {
+
+    .header {
+        display: none;
+    }
+
+
+}
+
+/* 문제점:
+    1. 
+*/
