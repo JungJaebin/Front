@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조 가상 클래스 선택자 child</title>
+    <style>
+        div.first {
+            border: 3px solid green;
+            width: 600px;
+        }
+
+        div.second {
+            border: 3px solid orange;
+            width: 600px;
+        }
+
+        div>p:first-child {
+            color: red;
+            font-weight: bold;
+        }
+
+        div>p:last-child {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>구조 가상 클래스 선택자</h1>
+    <hr>
+    <div class="first">
+        <p>이 p 태그는 div 태그의 첫 번째 child 입니다!</p>
+        <p>이 p 태그는 div 태그의 child 입니다!</p>
+        <p>이 p 태그는 div 태그의 child 입니다!</p>
+        <div class="second">
+            <p>이 p 태그는 div 태그의 첫 번째 child 입니다!</p>
+            <p>이 p 태그는 div 태그의 child 입니다!</p>
+            <p>이 p 태그는 div 태그의 마지막 child 입니다!</p>
+        </div>
+    </div>
+</body>
+
+</html>

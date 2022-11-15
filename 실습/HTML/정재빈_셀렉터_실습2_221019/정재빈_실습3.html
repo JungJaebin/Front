@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적 가상 클래스</title>
+    <style>
+        input {
+            border: 3px solid green;
+            width: 300px;
+            padding: 10px;
+            /* input 태그의 기본 스타일 무시 */
+            outline: none;
+        }
+
+        input:focus {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>input 요소의 스타일 설정</h1>
+    <hr>
+    <form>
+        아래의 입력 양식을 마우스로 클릭해보세요!<br><br>
+        <input type="text" id="email" name="email" value="마우스로 클릭해보세요!">
+    </form>
+</body>
+
+</html>
