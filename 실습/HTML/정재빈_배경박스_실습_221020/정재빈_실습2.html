@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+    <style>
+        #none {
+            display: none;
+        }
+
+        #inline {
+            color: blue;
+            display: inline;
+            background-color: skyblue;
+            border: 3px solid green;
+        }
+
+        #inline_block {
+            color: blue;
+            display: inline-block;
+            background-color: skyblue;
+            border: 3px solid green;
+            width: 110px;
+            height: 40px;
+        }
+
+        #block {
+            color: blue;
+            background-color: skyblue;
+            border: 3px solid green;
+        }
+
+        #span_block {
+            color: blue;
+            display: block;
+            background-color: yellow;
+            border: 2px dotted red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>블록, 인라인, 인라인 블록</h2>
+    <hr>
+
+    <span>나는</span>
+    <div id="none">div(block)</div>
+    <span>입니다.</span>
+
+    <p></p>
+
+    <span>나는</span>
+    <div id="inline">div(inline)</div>
+    <span>입니다.</span>
+
+    <p></p>
+
+    <span>나는</span>
+    <div id="inline_block">div(inline-block)</div>
+    <span>입니다.</span>
+
+    <p></p>
+
+    <span>나는</span>
+    <div id="block">div <span id="span_block">span(block)</span> 입니다.</div>
+
+</body>
+
+</html>
