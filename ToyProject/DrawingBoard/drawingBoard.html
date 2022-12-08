@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="drawingBoard.css">
+    <title>그림판</title>
+</head>
+
+<body>
+    <!-- 흐르는 Text -->
+    <div class="flowText">
+        <div class="flowWrap">Let's Drawing! </div>
+        <div class="flowWrap">Let's Drawing! </div>
+        <div class="flowWrap">Let's Drawing! </div>
+        <div class="flowWrap">Let's Drawing! </div>
+        <div class="flowWrap">Let's Drawing! </div>
+        <div class="flowWrap">Let's Drawing! </div>
+    </div>
+
+    <section class="container">
+        <div id="toolbar">
+            <!-- 지우기 버튼 -->
+            <button id="clear">지우기</button><br />
+
+            <!-- 선 굵기 -->
+            <input id="lineWidth" type="number" value="5"><br />
+
+            <!-- 색상 선택 -->
+            <div id="colorLists">
+                <div class="colorList" style="background-color: #ff5252" data-color="#ff5252"></div>
+                <div class="colorList" style="background-color: #e15f41" data-color="#e15f41"></div>
+                <div class="colorList" style="background-color: #f5cd79" data-color="#f5cd79"></div>
+                <div class="colorList" style="background-color: #78e08f" data-color="#78e08f"></div>
+                <div class="colorList" style="background-color: #546de5" data-color="#546de5"></div>
+                <div class="colorList" style="background-color: #0c2461" data-color="#0c2461"></div>
+                <div class="colorList" style="background-color: #82589F" data-color="#82589F"></div>
+                <div class="colorList" style="background-color: #000" data-color="#000"></div>
+            </div><br />
+
+            <!-- img 다운로드 버튼 -->
+            <button id="save">저장하기</button><br />
+        </div>
+
+        <!-- canvas태그 사용 -->
+        <canvas id="drawing-board" width="100%" height="1000"></canvas>
+    </section>
+
+    <script src="./drawingBoard.js"></script>
+</body>
+
+</html>
