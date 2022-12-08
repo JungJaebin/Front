@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+
+    /* 넘어가는 부분 자르기 */
+    overflow: hidden;
+
+    color: white;
+}
+
+.flowText {
+    display: flex;
+    flex: 0 0 auto;
+
+    /* 공백 기기 */
+    white-space: nowrap;
+
+    /* 모든 프로퍼티의 변화를 n초에 걸쳐 전환 */
+    transition: 0.3s;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+
+    background-color: black;
+    color: white;
+}
+
+.flowWrap {
+    /* textLoop 이름의 animation 설정 */
+    animation: textLoop 20s linear infinite;
+
+    padding-right: 1.4881vw;
+}
+
+/* textLoop의 animation의 0% ~ 100%까지 설정 */
+@keyframes textLoop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+#toolbar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100px;
+    height: 100%;
+
+    background-color: white;
+}
+
+#toolbar input {
+    width: 50px;
+
+    text-align: center;
+}
+
+.colorList {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+/* 특정 butoon CSS */
+button {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 13px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover,
+/* focus된 요소에 style 지정 */
+button:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+button:active {
+    background: var(--color);
+    color: #fff;
+}
